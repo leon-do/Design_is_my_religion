@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+
+<html>
+	<style>
+		p{	
+			text-align: right;
+			font-family:Comic Sans MS;
+		}
+	</style>
+
+	<body>
+		<p id=txt1>Eye have an I 4 deisgn.</p>
+		<p id=txt2>Just do the reverse of this.</p>
+	</body>
+</html>
+
+<script>	
+// reverses txt2
+	var phrase = document.getElementById("txt2").innerHTML;
+	var reverse_array = phrase.split("");
+	var reverse_phrase = reverse_array.reverse();
+	var join = reverse_phrase.join("");
+	//alert(join)
+	document.getElementById("txt2").innerHTML = join;
+
+// random color
+    setInterval(function(){
+    		var r = Math.floor(Math.random() * 255);
+			var g = Math.floor(Math.random() * 255);
+			var b = Math.floor(Math.random() * 255);
+			var rgb = "rgb(" + r + "," + g + "," + b + ")";
+    	    document.getElementById("txt1").style.color = rgb;
+
+    	    var fontSizee = Math.floor(Math.random() * 55) + "px";
+    	    document.getElementById("txt1").style.fontSize = fontSizee;
+   	}, 1000);
+
+
+    setInterval(function(){
+    		var r = Math.floor(Math.random() * 255);
+			var g = Math.floor(Math.random() * 255);
+			var b = Math.floor(Math.random() * 255);
+			var rgb = "rgb(" + r + "," + g + "," + b + ")";
+
+    	    document.getElementById("txt2").style.color = rgb;
+ 	}, 200);
+
+
+// random font size
+
+</script>
+
+
